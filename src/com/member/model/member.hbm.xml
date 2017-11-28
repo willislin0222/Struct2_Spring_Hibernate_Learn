@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.member.model.MemberVO" table="member" >
+        
+        <id name="mem_no" column="mem_no">
+            <generator class="com.member.model.MEMNOGenerator" />            
+        </id>
+        
+        <property name="mem_name" column="mem_name" />
+        <property name="mem_id" column="mem_id" />
+        <property name="mem_psw" column="mem_psw" />
+        <property name="mem_birthday" column="mem_birthday" />
+        <property name="mem_mobile" column="mem_mobile" />
+        <property name="mem_image" column="mem_image" />
+        
+        <set name="reservations" table="reservation" lazy="false" cascade="all"  inverse="true"  order-by="res_no asc">			
+			<key>
+				<column name="mem_no" />
+			</key>
+			<one-to-many class="com.reservation.model.ReservationVO" />
+		</set>
+		      
+    </class>
+</hibernate-mapping>
