@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.reservation.model.ReservationVO" table="reservation" >
+        
+        <id name="res_no" column="res_no">
+            <generator class="com.reservation.model.RESNOGenerator" />            
+        </id>
+        
+        <many-to-one name="memberVO" class="com.member.model.MemberVO" lazy="false">
+            <column name="mem_no" />
+        </many-to-one>
+        <property name="res_date" column="res_date" />
+        <property name="res_content" column="res_content" />
+        <property name="res_time" column="res_time" />
+
+        
+    </class>
+</hibernate-mapping>
