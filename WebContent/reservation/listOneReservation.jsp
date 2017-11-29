@@ -23,8 +23,7 @@
 			<th>預約日期</th>
 			<th>預約內容</th>
 			<th>預約時間</th>
-			<th>修改</th>
-			<th>刪除</th>
+			<th>會員資料</th>
 		</tr>
 		<tr align='center' valign='middle'>
 		     <td align="left">EL</td>
