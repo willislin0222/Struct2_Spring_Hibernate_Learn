@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.member.model.MemberVO;
 
@@ -45,6 +46,12 @@ public class ReservationService {
 		reservationVO.setRes_time(res_time);
 		dao.insert(reservationVO);
 		return reservationVO;
+	}
+	
+	// 未使用
+	public ReservationVO updateReservation(ReservationVO reservationVO) {
+		dao.update(reservationVO);
+		return dao.findByPrimaryKey(reservationVO.getRes_no());
 	}
 	
 		

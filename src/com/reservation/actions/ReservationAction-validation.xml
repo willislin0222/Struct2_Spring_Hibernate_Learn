@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+<validators>
+
+
+	<field name="reservationVO.res_date">
+		<field-validator type="required">
+			<message>預約日期: 請勿空白</message>
+		</field-validator>
+	</field>
+
+
+	<field name="reservationVO.res_content">
+		<field-validator type="requiredstring">
+			<message>預約項目: 請勿空白</message>
+		</field-validator>
+	</field>
+	
+	<field name="reservationVO.res_time">
+		<field-validator type="requiredstring">
+			<message>預約時間: 請勿空白</message>
+		</field-validator>
+	</field>
+
+
+</validators>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="globalMessages" />
+	
+	<package name="reservation" namespace="/reservation" extends="struts-default">
+
+	    <action name="addReservation"   class="com.reservation.actions.ReservationAction"  method="add">
+	        <result name="success">/reservation/listAllReservation.jsp</result>
+            <result name="input">/reservation/addReservation.jsp</result>
+		</action>
+		
+		<action name="getOne_For_UpdateReservation"   class="com.reservation.actions.ResnoAction"  method="getOne_For_Update">
+	        <result name="success">/reservation/update_reservation_input.jsp</result>
+		</action>
+		
+		<action name="updateReservation"   class="com.reservation.actions.ReservationAction"  method="update">
+	        <result name="success1">/reservation/listAllReservation.jsp</result>
+	        <result name="success2">/member/listReservations_BymMemno.jsp</result>
+	        <result name="success3">/member/listAllMember.jsp</result>
+            <result name="input">/reservation/update_reservation_input.jsp</result>
+		</action>
+		
+		<action name="deleteReservation"   class="com.reservation.actions.ResnoAction"  method="delete">
+	        <result name="success1">/reservation/listAllReservation.jsp</result>
+	        <result name="success2">/member/listReservations_BymMemno.jsp</result>
+	        <result name="success3">/member/listAllMember.jsp</result>
+		</action>
+				
+		<action name="getOne_For_DisplayReservation"   class="com.reservation.actions.ResnoAction"  method="getOne_For_Display">
+	        <result name="success">/reservation/listOneReservation.jsp</result>
+            <result name="input">/select_page.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>

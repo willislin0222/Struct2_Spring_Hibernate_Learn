@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+<validators>
+
+	<field name="res_no">
+		<field-validator type="requiredstring">
+			<message>輸入預約編號 (如20171129-RES00000010): 請勿空白-請輸入數字</message>
+		</field-validator>
+	</field>
+
+</validators>

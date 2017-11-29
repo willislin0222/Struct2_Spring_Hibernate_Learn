@@ -128,7 +128,7 @@ public class MemberDAO implements MemberDAO_interface{
 
 		//● 修改-2(不需設定cascade="save-update" 或 cascade="all")(這是經常要用到的一般修改)
 //		MemberVO memberVO2 = new MemberVO(); // 會員POJO
-//		memberVO2.setMem_no("MEM00000008"); // 【如果增加memberVO2.setMem_no("MEM00000008"); 則變成update】
+//		memberVO2.setMem_no("MEM00000009"); // 【如果增加memberVO2.setMem_no("MEM00000008"); 則變成update】
 //		memberVO2.setMem_id("UAO11");
 //		memberVO2.setMem_name("貞雅");
 //		memberVO2.setMem_psw("1227");
